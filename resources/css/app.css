@@ -1,0 +1,46 @@
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+[x-cloak] {
+    display: none;
+}
+.change-lang-ul {
+    display: flex;
+}
+
+.change-lang-li {
+    position: relative;
+}
+
+.change-lang-li + .change-lang-li:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - .7em);
+    display: block;
+    width: 2px;
+    height: 1.5em;
+    background: #666;
+}
+
+.change-lang-a {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0 1em;
+    color: #423737;
+    transition: all 0.3s 0s ease;
+}
+
+.change-lang-a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    opacity: 0;
+}
+
+.change-lang-a:hover::after {
+    opacity: 1;
+}
